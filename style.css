@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+    background-color: #b184f5;
+    color: #333;
+    padding: 20px;
+}
+header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 30px;
+    background-color: #3f026b;
+    color: white;
+    border-radius: 12px;
+}
+header span {
+    color: #c624ef;
+    font-weight: 300;
+}
+
+.grid-container {
+    display: grid;
+    background-color: #c48ced;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: minmax(200px, auto) minmax(200px, auto) minmax(200px, auto);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto; 
+}
+
+.noticia {
+    background-color: rgb(255, 168, 243);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(61, 2, 155, 0.597);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; 
+}
+.noticia:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(67, 1, 173, 0.597);
+}
+
+.categoria {
+    align-self: flex-start;
+    background-color: #3c0097;
+    color: white;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.noticia h2 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: #270043;
+}
+.noticia p {
+    color: #8858a2;
+    line-height: 1.5;
+}
+
+.destaque {
+    grid-column: 1 / 3; 
+    grid-row: 1 / 3;    
+    background: linear-gradient(135deg, #2d024c, #600694, #7c08be);
+    color: white;
+}
+.destaque h2 {
+    color: white;
+    font-size: 2.2rem;
+}
+.destaque p {
+    color: #ccc;
+    font-size: 1.1rem;
+}
+.destaque .categoria {
+    background-color: #ff1900;
+}
+
+.banner-horizontal {
+    grid-column: 1 / 4;
+    background: linear-gradient(135deg, #c46ddc, #410289);
+    color: white;
+}
+.banner-horizontal h2, .banner-horizontal p {
+    color: white;
+}
+.banner-horizontal .categoria {
+    background-color: #f9e747;
+    color: #333;
+}
